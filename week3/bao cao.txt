@@ -1,0 +1,49 @@
+MSSV: 1702189
+
+Báo cáo thực hành tuần 3
+
+Bài tập 2:
++ Phổ biên độ, phổ pha
+Với Fs1 = 1000; phổ gần tương đương với tín hiệu sin, cos ban 
+
+ Fs2, Fs3, Fs4, Fs5, Fs6 là {80, 100, 120, 150, 200, 300}
+
+tín hiệu ban đầu với f = { 50, 120} 
+
+tại f = 100 : X(W) xuất hiện rõ nhất tại w = 20: chồng phổ  120 - 100 = 20;
+tại f = 120   X(W) xuất hiện rõ nhất tại w = 50: tần số cơ bản 50;
+tại f = 150 : X(W) xuất hiện rõ nhất tại w = 30, 50: chồng phổ  150 - 120 = 30;( 150 - 50 = 100) 100 / 2 = 50;
+tại f = 200 : X(W) xuất hiện rõ nhất tại w = 80: chồng phổ  200 - 120 = 80;
+tại f = 300 : X(W) xuất hiện rõ nhất tại w = 50 và 120: không có hiện tượng chồng phổ
+								
+=> f < 2fmax = 240 : xuất hiện hiện tượng chồng phổ. 
+các tín hiệu với f < 240 thì đồ thị bị biến danh nhiều khi nối các điểm lại với nhau
+chỉ có f = 300 và f = 1000 thì không xuất hiện hiện tượng chồng phổ.
+
+Bài tập 3:
+
+x = sin( 2*pi* 1000* t) + 2*cos( 2 *pi*750*t) - sin( 2*pi*400*t);
+y = x + 2*randn(size(t));
+
+f = 500  tần số rõ nhất w = 100: chồng phổ  500 - 400 = 100
+f = 700  tần sô rõ nhất w = 50, 300. chồng phổ 750 - 700 = 50, 700 - 400 = 300;
+f = 1000 tần sô rõ nhất w = 250, 400. chồng phổ 1000 - 750 = 250, 400: tần số cơ bản
+f = 1500 tần số rõ nhất w = 750: chồng phổ  1500 - 750 = 750;
+f = 2000 tần số rõ nhất w = 400, 750: không có chồng phổ: 2 tần số trên là 2 tần số cơ bản.
+f = 3000 tần số rõ nhất w = 400, 750, 1000: không có chồng phổ: 3 tần số trên là 3 tần số cơ bản.
+
+BÀi tập 4:
+
+1: đọc 1 file.m3p khác và vẽ phổ biên độ: Done
+2: Theo tiêu chu n Nyquist, tần số cực của tín hiệu tương tự phải < fs/2;
+fmax < fs/2;
+
+3: khi Fs = Fs / 4;
+lấy mẫu chỉ bằng 1 / 4 so với bản gốc, nghe khó vì bị cắt đi và thời lượng nghe cũng giảm bớt.
+khi vẽ cả 2 phổ trên cùng 1 đồ thị thấy 	có sự tương đương, lấy mấu( cứ 4 lấy 1) -> đồ thị sau bị dịch về phía gốc 0 hơn.
+
+4: giả sử vẫn lẫy fs = 4k Hz thì Wmax = fs/ 2 = 2k Hz;
+5: cho tín hiệu qua bộ lọc thông thấp vs tần số cắt 2k. 
+
+
+
