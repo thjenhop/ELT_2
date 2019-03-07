@@ -1,0 +1,21 @@
+function ans = ex6();
+
+a = [1 -4 3];
+b = [1 1];
+[h, n] = impz(b, a);
+stem(n, h);
+% stem (h(n)) with a, b %
+
+
+% ex6_b%
+% plot a = 0, b = 0%
+
+zplane()
+
+% ex6_d%
+% stem y(n): x(n) = 2^n * u(n)%;
+u = zeros(size(n));
+u = [n >= 0];
+x = ((2).^n).* u;
+y = conv(x, h);
+stem(n, y);
